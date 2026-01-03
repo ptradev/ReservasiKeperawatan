@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -13,6 +12,13 @@ return new class extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("patient_id");
+            $table->unsignedBigInteger("nurse_id");
+            $table->unsignedBigInteger("service_id");
+            $table->date("reservation_data");
+            $table->time("start_time");
+            $table->enum("status", ["confirmed", "pending", "completed", "canceled"])->default("pending");
+            $table->bigInteger("total_price");
             $table->timestamps();
         });
     }

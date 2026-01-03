@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->enum("role", ["nurse", "patient", "admin"]);
+            $table->enum("role", ["nurse", "patient", "admin"])->default("patient");
             $table->integer('phone')->nullable();
             $table->text('address')->nullable();
             $table->string('specialization')->nullable();
