@@ -3,21 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Log extends Model
+class Patient extends Model
 {
-    use SoftDeletes;
-
     /**
      * Table name
      */
-    protected $table = 'logs';
+    protected $table = 'patients';
 
     /**
      * Primary key configuration
      */
-    protected $primaryKey = 'log_id';
+    protected $primaryKey = 'patient_id';
     public $incrementing = true;
     protected $keyType = 'int';
 
@@ -25,11 +22,19 @@ class Log extends Model
      * Mass assignable attributes
      */
     protected $fillable = [
-        'user_id',
-        'log_method',
-        'log_url',
-        'log_ip',
-        'log_request',
+        'name',
+        'nik',
+        'phone',
+        'address',
+        'birth_date',
+        'gender',
+    ];
+
+    /**
+     * Casts
+     */
+    protected $casts = [
+        'birth_date' => 'date',
     ];
 
     /*
@@ -38,8 +43,9 @@ class Log extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function user()
+    // Pasien memiliki banyak transaksi
+    public function transactions()
     {
-        return $this->belongsTo(User::class, 'user_id', 'user_id');
+        return $this->hasMany(Transaction::class, 'patient_id', 'patient_id');
     }
 }

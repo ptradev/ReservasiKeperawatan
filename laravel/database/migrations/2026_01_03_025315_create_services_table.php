@@ -11,11 +11,12 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('services', function (Blueprint $table) {
-            $table->id();
+            $table->id("service_id");
             $table->string("service_name");
             $table->text("description")->nullable();
             $table->bigInteger("price");
-            $table->integer("duration_m"); // duration in minute
+            $table->integer("duration"); // duration in minute
+            $table->unsignedBigInteger("nurse_id");
             $table->timestamps();
         });
     }
