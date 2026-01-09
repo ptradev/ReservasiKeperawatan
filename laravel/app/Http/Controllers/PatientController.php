@@ -12,7 +12,7 @@ class PatientController extends Controller
     public function getAllData()
     {
         try {
-            $data = Patient::with([])->get();
+            $data = Patient::with(["transactions"])->get();
             return ApiResponse::success($data, "Success To Get All Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
