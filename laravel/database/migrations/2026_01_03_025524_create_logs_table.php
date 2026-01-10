@@ -18,7 +18,6 @@ return new class extends Migration {
             $table->text("log_ip");
             $table->text("log_request");
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
