@@ -36,7 +36,7 @@ class Nurse extends Model
     */
 
     // Perawat memiliki banyak layanan
-    public function services()
+    public function service()
     {
         return $this->hasMany(Service::class, 'nurse_id', 'nurse_id');
     }
