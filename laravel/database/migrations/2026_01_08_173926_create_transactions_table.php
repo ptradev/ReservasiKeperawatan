@@ -15,8 +15,8 @@ return new class extends Migration {
 
             $table->date('reservation_date');
 
-            $table->string('payment_method');
-            $table->string('status');
+            $table->enum('payment_method', ["cash", "cashless"]);
+            $table->enum('status', ["waiting", "approved", "completed", "cancelled"]);
             $table->text('notes')->nullable();
 
             $table->timestamp('paid_at')->nullable();

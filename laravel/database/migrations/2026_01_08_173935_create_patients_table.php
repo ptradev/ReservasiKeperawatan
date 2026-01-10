@@ -11,8 +11,8 @@ return new class extends Migration {
             $table->bigIncrements('patient_id');
 
             $table->string('name');
-            $table->string('nik')->unique();
-            $table->string('phone');
+            $table->bigInteger('nik')->unique();
+            $table->integer('phone');
             $table->text('address');
             $table->date('birth_date');
             $table->string('gender');

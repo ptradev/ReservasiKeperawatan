@@ -12,7 +12,7 @@ class NurseController extends Controller
     public function getAllData()
     {
         try {
-            $data = Nurse::with(["services"])->get();
+            $data = Nurse::with(["service"])->get();
             return ApiResponse::success($data, "Success To Get All Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -21,7 +21,7 @@ class NurseController extends Controller
     public function getSingleData($id)
     {
         try {
-            $data = Nurse::where("nurse_id", $id)->with(["services"])->get();
+            $data = Nurse::where("nurse_id", $id)->with(["service"])->get();
             return ApiResponse::success($data, "Success To Get Single Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);

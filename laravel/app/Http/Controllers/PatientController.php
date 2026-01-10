@@ -21,7 +21,7 @@ class PatientController extends Controller
     public function getSingleData($id)
     {
         try {
-            $data = Patient::where("patient_id", $id)->with([])->get();
+            $data = Patient::where("patient_id", $id)->with(["transactions"])->first();
             return ApiResponse::success($data, "Success To Get Single Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -60,7 +60,7 @@ class PatientController extends Controller
             ]);
 
             $data = Patient::where("patient_id", $id)->update($validated);
-            return ApiResponse::success($data, "Success To Get Update Data");
+            return ApiResponse::success($data, "Success To Update Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
         }
