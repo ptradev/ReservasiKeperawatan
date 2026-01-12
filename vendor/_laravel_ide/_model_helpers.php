@@ -7,7 +7,6 @@ namespace App\Models {
      *
      * @property \Illuminate\Support\Carbon|null $updated_at
      * @property \Illuminate\Support\Carbon|null $created_at
-     * @property string $log_request
      * @property string $log_ip
      * @property string $log_url
      * @property string $log_method
@@ -19,7 +18,6 @@ namespace App\Models {
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereLogMethod($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereLogUrl($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereLogIp($value)
-     * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereLogRequest($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereCreatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log whereUpdatedAt($value)
      * @method static \Illuminate\Database\Eloquent\Builder<Log>|Log newModelQuery()
