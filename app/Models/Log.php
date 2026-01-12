@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Log extends Model
 {
-    use SoftDeletes;
 
     /**
      * Table name
@@ -29,7 +28,6 @@ class Log extends Model
         'log_method',
         'log_url',
         'log_ip',
-        
     ];
 
     /*

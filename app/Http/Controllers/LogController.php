@@ -11,7 +11,7 @@ class LogController extends Controller
     public function getALlData()
     {
         try {
-            return ApiResponse::success(Log::orderByDesc()->get());
+            return ApiResponse::success(Log::orderByDesc("created_at")->get());
         } catch (\Exception $e) {
             return ApiResponse::error($e->getMessage());
         }
