@@ -1,0 +1,115 @@
+####################################
+# Laravel Core
+####################################
+/vendor
+/.env
+/.env.*
+/storage/*.key
+
+/storage/app/*
+!/storage/app/public
+
+/storage/framework/*
+/storage/logs/*
+/bootstrap/cache/*
+
+####################################
+# Node / Frontend (Vite, Mix, NPM, PNPM)
+####################################
+/node_modules
+/public/build
+/public/hot
+/mix-manifest.json
+
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+####################################
+# Cache / Temporary
+####################################
+*.log
+*.cache
+*.tmp
+*.temp
+*.swp
+*.swo
+*.pid
+
+.phpunit.result.cache
+/.phpunit.cache
+
+####################################
+# IDE / Editor
+####################################
+.idea/
+.vscode/
+*.iml
+
+####################################
+# OS Generated
+####################################
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+
+####################################
+# Docker
+####################################
+docker-compose.override.yml
+docker-compose.dev.yml
+
+####################################
+# Laravel Telescope / Debug
+####################################
+/storage/telescope
+/telescope.sqlite
+
+####################################
+# Laravel Horizon
+####################################
+/storage/horizon
+
+####################################
+# Laravel Debugbar
+####################################
+/storage/debugbar
+
+####################################
+# Testing / Coverage
+####################################
+/coverage
+/.nyc_output
+
+####################################
+# Backup / Dump / Export
+####################################
+*.sql
+*.sqlite
+*.db
+*.bak
+*.backup
+*.dump
+
+####################################
+# Env & Secret Files (Extra Safety)
+####################################
+*.pem
+*.key
+*.crt
+*.p12
+*.keystore
+
+####################################
+# Logs (Extra)
+####################################
+laravel.log
+*.log.*
+
+####################################
+# Optional / Custom
+####################################
+.env.testing
+.env.production
+.env.staging
