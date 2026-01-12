@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LogController;
 use App\Http\Controllers\NurseController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\ServicesController;
@@ -43,4 +44,6 @@ Route::middleware("jwt.auth")->group(function () {
     Route::post("/transactions", [TransactionController::class, "createData"]);
     Route::patch("/transactions/{id}", [TransactionController::class, "updateData"]);
     Route::delete("/transactions/{id}", [TransactionController::class, "deleteData"]);
+
+    Route::get("/logs", [LogController::class, "getAllData"]);
 });
