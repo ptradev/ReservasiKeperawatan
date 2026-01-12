@@ -21,7 +21,7 @@ class ServicesController extends Controller
     public function getSingleData($id)
     {
         try {
-            $data = Service::where("nurse_id", $id)->with(['nurse'])->get();
+            $data = Service::where("service_id", $id)->with(['nurse'])->get();
             return ApiResponse::success($data, "Success To Get Single Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -56,7 +56,7 @@ class ServicesController extends Controller
                 'duration' => 'sometimes|integer|min:1',
                 'nurse_id' => 'sometimes|exists:nurses,nurse_id',
             ]);
-            $data = Service::where("nurse_id", $id)->update($validated);
+            $data = Service::where("service_id", $id)->update($validated);
             return ApiResponse::success($data, "Success To Get Update Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -65,7 +65,7 @@ class ServicesController extends Controller
     public function deleteData($id)
     {
         try {
-            $data = Service::where("nurse_id", $id)->delete();
+            $data = Service::where("service_id", $id)->delete();
             return ApiResponse::success($data, "Success To Get Delete Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
