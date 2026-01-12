@@ -29,7 +29,7 @@ class Log extends Model
         'log_method',
         'log_url',
         'log_ip',
-        'log_request',
+        
     ];
 
     /*

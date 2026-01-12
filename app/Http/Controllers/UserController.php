@@ -6,13 +6,14 @@ use App\Helpers\ApiResponse;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
      public function getAllData()
     {
         try {
-            $data = User::with(["services"])->get();
+            $data = User::with([])->get();
             return ApiResponse::success($data, "Success To Get All Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -21,7 +22,7 @@ class UserController extends Controller
     public function getSingleData($id)
     {
         try {
-            $data = User::where("nurse_id", $id)->with(["services"])->get();
+            $data = User::where("user_id", $id)->with([])->get();
             return ApiResponse::success($data, "Success To Get Single Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -32,11 +33,12 @@ class UserController extends Controller
         try {
             $validated = $request->validate([
                 'name' => "required|string",
-                'phone' => "required|integer",
-                'address' => "required|string",
-                'specialization' => "required",
-                'status' => "required",
+                'email' => "required|string|email",
+                'password' => "required|string",
+                
             ]);
+
+            $validated["password"] = Hash::make($validated["password"]);
 
             $data = User::create($validated);
 
@@ -49,15 +51,14 @@ class UserController extends Controller
     public function updateData(Request $request, $id)
     {
         try {
-            $validated = $request->validate([
-                'name' => "required|string",
-                'phone' => "required|integer",
-                'address' => "required|string",
-                'specialization' => "required",
-                'status' => "required",
+             $validated = $request->validate([
+                'name' => "sometimes|string",
+                'email' => "sometimes|string|email",
+                'password' => "sometimes|string",
             ]);
 
-            $data = User::where("nurse_id", $id)->update($validated);
+            if($validated["password"] ?? false ) $validated["password"] = Hash::make($validated["password"]);
+            $data = User::where("user_id", $id)->update($validated);
             return ApiResponse::success($data, "Success To Get Update Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);
@@ -66,7 +67,7 @@ class UserController extends Controller
     public function deleteData($id)
     {
         try {
-            $data = User::where("nurse_id", $id)->delete();
+            $data = User::where("user_id", $id)->delete();
             return ApiResponse::success($data, "Success To Get Delete Data");
         } catch (Exception $e) {
             return ApiResponse::error("Internal Server Error", 500, $e);

@@ -18,12 +18,14 @@ class LogMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
+
+
         $logData = [
-            'user_id' => Auth::check() ? Auth::id() : null,
+            'user_id' => Auth::user()["user_id"] ?? null,
             'log_method' => $request->method(),
             'log_url' => $request->fullUrl(),
             'log_ip' => $request->ip(),
-            'log_request' => $request->except(['password', 'password_confirmation']),
+          
         ];
 
         DB::table('logs')->insert($logData);

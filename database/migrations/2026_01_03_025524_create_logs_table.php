@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string("log_method");
             $table->string("log_url");
             $table->text("log_ip");
-            $table->text("log_request");
+           
             $table->timestamps();
         });
     }
