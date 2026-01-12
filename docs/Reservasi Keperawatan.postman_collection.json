@@ -1,0 +1,1777 @@
+{
+	"info": {
+		"_postman_id": "a34a4514-d98c-4f32-9847-ce2e7cc845a0",
+		"name": "Reservasi Keperawatan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "51452937",
+		"_collection_link": "https://putriayuwandarii-4345371.postman.co/workspace/31fee5b9-2e1f-4f87-81bc-d4e20bb334ff/collection/51452937-a34a4514-d98c-4f32-9847-ce2e7cc845a0?action=share&source=collection_link&creator=51452937"
+	},
+	"item": [
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/patients"
+					},
+					"response": [
+						{
+							"name": "Get All Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "/patients"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:42:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get All Data\",\n    \"data\": [\n        {\n            \"patient_id\": 1,\n            \"name\": \"Ahmad Fauzi\",\n            \"nik\": \"3276011203990001\",\n            \"phone\": \"081234567890\",\n            \"address\": \"Jl. Melati No. 5, Bandung\",\n            \"birth_date\": \"1999-03-12T00:00:00.000000Z\",\n            \"gender\": \"Laki-laki\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"transactions\": [\n                {\n                    \"transaction_id\": 1,\n                    \"patient_id\": 1,\n                    \"service_id\": 1,\n                    \"reservation_date\": \"2026-01-15T00:00:00.000000Z\",\n                    \"payment_method\": \"cash\",\n                    \"status\": \"paid\",\n                    \"notes\": \"Pasien minta jadwal pagi\",\n                    \"paid_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ]\n        },\n        {\n            \"patient_id\": 2,\n            \"name\": \"Siti Nurhaliza\",\n            \"nik\": \"3276012504980002\",\n            \"phone\": \"082345678901\",\n            \"address\": \"Jl. Kenanga No. 10, Jakarta\",\n            \"birth_date\": \"1998-04-25T00:00:00.000000Z\",\n            \"gender\": \"Perempuan\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"transactions\": [\n                {\n                    \"transaction_id\": 2,\n                    \"patient_id\": 2,\n                    \"service_id\": 2,\n                    \"reservation_date\": \"2026-01-16T00:00:00.000000Z\",\n                    \"payment_method\": \"transfer\",\n                    \"status\": \"pending\",\n                    \"notes\": null,\n                    \"paid_at\": null,\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ]\n        },\n        {\n            \"patient_id\": 3,\n            \"name\": \"Budi Santoso\",\n            \"nik\": \"3276010101950003\",\n            \"phone\": \"083456789012\",\n            \"address\": \"Jl. Mawar No. 3, Surabaya\",\n            \"birth_date\": \"1995-01-01T00:00:00.000000Z\",\n            \"gender\": \"Laki-laki\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"transactions\": [\n                {\n                    \"transaction_id\": 3,\n                    \"patient_id\": 3,\n                    \"service_id\": 1,\n                    \"reservation_date\": \"2026-01-17T00:00:00.000000Z\",\n                    \"payment_method\": \"cash\",\n                    \"status\": \"paid\",\n                    \"notes\": \"Perlu peralatan tambahan\",\n                    \"paid_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"created_at\": null,\n                    \"updated_at\": null\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/patients/1"
+					},
+					"response": [
+						{
+							"name": "Get Single Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "/patients/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:42:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Single Data\",\n    \"data\": [\n        {\n            \"patient_id\": 1,\n            \"name\": \"Ahmad Fauzi\",\n            \"nik\": \"3276011203990001\",\n            \"phone\": \"081234567890\",\n            \"address\": \"Jl. Melati No. 5, Bandung\",\n            \"birth_date\": \"1999-03-12T00:00:00.000000Z\",\n            \"gender\": \"Laki-laki\",\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Ahmad Fauzi\",\r\n  \"nik\": 32010101010100010,\r\n  \"phone\": 812345678,\r\n  \"address\": \"Jl. Merdeka No. 1, Jakarta\",\r\n  \"birth_date\": \"1995-06-15\",\r\n  \"gender\": \"male\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/patients"
+					},
+					"response": [
+						{
+							"name": "Create Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Ahmad Fauzi\",\r\n  \"nik\": 32010101010100010,\r\n  \"phone\": 812345678,\r\n  \"address\": \"Jl. Merdeka No. 1, Jakarta\",\r\n  \"birth_date\": \"1995-06-15\",\r\n  \"gender\": \"male\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/patients"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:15:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Create Data\",\n    \"data\": {\n        \"name\": \"Ahmad Fauzi\",\n        \"nik\": 32010101010100010,\n        \"phone\": 812345678,\n        \"address\": \"Jl. Merdeka No. 1, Jakarta\",\n        \"birth_date\": \"1995-06-15T00:00:00.000000Z\",\n        \"gender\": \"male\",\n        \"updated_at\": \"2026-01-10T17:15:57.000000Z\",\n        \"created_at\": \"2026-01-10T17:15:57.000000Z\",\n        \"patient_id\": 6\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"phone\": 813999888,\r\n  \"address\": \"Jl. Sudirman No. 25, Bandung\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/patients/6"
+					},
+					"response": [
+						{
+							"name": "Update Data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"phone\": 813999888,\r\n  \"address\": \"Jl. Sudirman No. 25, Bandung\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/patients/6"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:16:16 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Update Data\",\n    \"data\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Data Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{apiURL}}/patients/1"
+					},
+					"response": [
+						{
+							"name": "Get All Data Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "/patients/6"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:16:45 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Delete Data\",\n    \"data\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Nurse",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/nurses"
+					},
+					"response": [
+						{
+							"name": "Get All Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "/nurses"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:44:31 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get All Data\",\n    \"data\": [\n        {\n            \"nurse_id\": 1,\n            \"name\": \"Siti Aminah\",\n            \"phone\": \"081234567890\",\n            \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n            \"specialization\": \"Perawat Umum\",\n            \"status\": \"aktif\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"service\": [\n                {\n                    \"service_id\": 1,\n                    \"service_name\": \"Perawatan Luka\",\n                    \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n                    \"price\": 150000,\n                    \"duration\": 60,\n                    \"nurse_id\": 1,\n                    \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"updated_at\": \"2026-01-12T17:42:15.000000Z\"\n                },\n                {\n                    \"service_id\": 3,\n                    \"service_name\": \"Perawatan Lansia\",\n                    \"description\": \"Pendampingan dan perawatan lansia di rumah\",\n                    \"price\": 300000,\n                    \"duration\": 120,\n                    \"nurse_id\": 1,\n                    \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"updated_at\": \"2026-01-12T17:42:15.000000Z\"\n                }\n            ]\n        },\n        {\n            \"nurse_id\": 2,\n            \"name\": \"Dewi Lestari\",\n            \"phone\": \"082345678901\",\n            \"address\": \"Jl. Sudirman No. 22, Bandung\",\n            \"specialization\": \"Perawat Anak\",\n            \"status\": \"aktif\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"service\": [\n                {\n                    \"service_id\": 2,\n                    \"service_name\": \"Suntik Vitamin\",\n                    \"description\": \"Layanan suntik vitamin sesuai kebutuhan pasien\",\n                    \"price\": 100000,\n                    \"duration\": 30,\n                    \"nurse_id\": 2,\n                    \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"updated_at\": \"2026-01-12T17:42:15.000000Z\"\n                }\n            ]\n        },\n        {\n            \"nurse_id\": 3,\n            \"name\": \"Rina Kurniawati\",\n            \"phone\": \"083456789012\",\n            \"address\": \"Jl. Diponegoro No. 5, Surabaya\",\n            \"specialization\": \"Perawat Gigi\",\n            \"status\": \"nonaktif\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"service\": []\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/nurses/1"
+					},
+					"response": [
+						{
+							"name": "Get Single Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "/nurses/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:44:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Single Data\",\n    \"data\": [\n        {\n            \"nurse_id\": 1,\n            \"name\": \"Siti Aminah\",\n            \"phone\": \"081234567890\",\n            \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n            \"specialization\": \"Perawat Umum\",\n            \"status\": \"aktif\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"service\": [\n                {\n                    \"service_id\": 1,\n                    \"service_name\": \"Perawatan Luka\",\n                    \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n                    \"price\": 150000,\n                    \"duration\": 60,\n                    \"nurse_id\": 1,\n                    \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"updated_at\": \"2026-01-12T17:42:15.000000Z\"\n                },\n                {\n                    \"service_id\": 3,\n                    \"service_name\": \"Perawatan Lansia\",\n                    \"description\": \"Pendampingan dan perawatan lansia di rumah\",\n                    \"price\": 300000,\n                    \"duration\": 120,\n                    \"nurse_id\": 1,\n                    \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n                    \"updated_at\": \"2026-01-12T17:42:15.000000Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Siti Aminah\",\r\n  \"phone\": 82345678901,\r\n  \"address\": \"Jl. Sudirman No. 10, Jakarta\",\r\n  \"specialization\": \"Perawat Umum\",\r\n  \"status\": \"aktif\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/nurses"
+					},
+					"response": [
+						{
+							"name": "Create Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Siti Aminah\",\r\n  \"phone\": 82345678901,\r\n  \"address\": \"Jl. Sudirman No. 10, Jakarta\",\r\n  \"specialization\": \"Perawat Umum\",\r\n  \"status\": \"aktif\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/nurses"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:47:10 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Create Data\",\n    \"data\": {\n        \"name\": \"Siti Aminah\",\n        \"phone\": 82345678901,\n        \"address\": \"Jl. Sudirman No. 10, Jakarta\",\n        \"specialization\": \"Perawat Umum\",\n        \"status\": \"aktif\",\n        \"updated_at\": \"2026-01-12T17:47:10.000000Z\",\n        \"created_at\": \"2026-01-12T17:47:10.000000Z\",\n        \"nurse_id\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Siti Aminah Update\",\r\n  \"phone\": 82345678901,\r\n  \"address\": \"Jl. Sudirman No. 10, Jakarta\",\r\n  \"specialization\": \"Perawat Umum\",\r\n  \"status\": \"aktif\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/patients/1"
+					},
+					"response": [
+						{
+							"name": "Update Data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Siti Aminah Update\",\r\n  \"phone\": 82345678901,\r\n  \"address\": \"Jl. Sudirman No. 10, Jakarta\",\r\n  \"specialization\": \"Perawat Umum\",\r\n  \"status\": \"aktif\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "/patients/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:47:52 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Update Data\",\n    \"data\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Data Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{apiURL}}/patients/1"
+					},
+					"response": [
+						{
+							"name": "Get All Data Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiURL}}/patients/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 17:48:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Delete Data\",\n    \"data\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/services"
+					},
+					"response": [
+						{
+							"name": "Get All Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/services"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:22:24 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get All Data\",\n    \"data\": [\n        {\n            \"service_id\": 1,\n            \"service_name\": \"Perawatan Luka\",\n            \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n            \"price\": 150000,\n            \"duration\": 60,\n            \"nurse_id\": 1,\n            \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"updated_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"nurse\": {\n                \"nurse_id\": 1,\n                \"name\": \"Siti Aminah\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n                \"specialization\": \"Perawat Umum\",\n                \"status\": \"aktif\",\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"service_id\": 2,\n            \"service_name\": \"Suntik Vitamin\",\n            \"description\": \"Layanan suntik vitamin sesuai kebutuhan pasien\",\n            \"price\": 100000,\n            \"duration\": 30,\n            \"nurse_id\": 2,\n            \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"updated_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"nurse\": {\n                \"nurse_id\": 2,\n                \"name\": \"Dewi Lestari\",\n                \"phone\": \"082345678901\",\n                \"address\": \"Jl. Sudirman No. 22, Bandung\",\n                \"specialization\": \"Perawat Anak\",\n                \"status\": \"aktif\",\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"service_id\": 3,\n            \"service_name\": \"Perawatan Lansia\",\n            \"description\": \"Pendampingan dan perawatan lansia di rumah\",\n            \"price\": 300000,\n            \"duration\": 120,\n            \"nurse_id\": 1,\n            \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"updated_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"nurse\": {\n                \"nurse_id\": 1,\n                \"name\": \"Siti Aminah\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n                \"specialization\": \"Perawat Umum\",\n                \"status\": \"aktif\",\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/services/1"
+					},
+					"response": [
+						{
+							"name": "Get Single Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/services/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:22:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Single Data\",\n    \"data\": [\n        {\n            \"service_id\": 1,\n            \"service_name\": \"Perawatan Luka\",\n            \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n            \"price\": 150000,\n            \"duration\": 60,\n            \"nurse_id\": 1,\n            \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"updated_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"nurse\": {\n                \"nurse_id\": 1,\n                \"name\": \"Siti Aminah\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n                \"specialization\": \"Perawat Umum\",\n                \"status\": \"aktif\",\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        },\n        {\n            \"service_id\": 3,\n            \"service_name\": \"Perawatan Lansia\",\n            \"description\": \"Pendampingan dan perawatan lansia di rumah\",\n            \"price\": 300000,\n            \"duration\": 120,\n            \"nurse_id\": 1,\n            \"created_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"updated_at\": \"2026-01-12T17:42:15.000000Z\",\n            \"nurse\": {\n                \"nurse_id\": 1,\n                \"name\": \"Siti Aminah\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Merdeka No. 10, Jakarta\",\n                \"specialization\": \"Perawat Umum\",\n                \"status\": \"aktif\",\n                \"created_at\": null,\n                \"updated_at\": null\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"service_name\": \"Perawatan Luka\",\r\n  \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\r\n  \"price\": 150000,\r\n  \"duration\": 60,\r\n  \"nurse_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/services"
+					},
+					"response": [
+						{
+							"name": "Create Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"service_name\": \"Perawatan Luka\",\r\n  \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\r\n  \"price\": 150000,\r\n  \"duration\": 60,\r\n  \"nurse_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/services"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:24:02 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Create Data\",\n    \"data\": {\n        \"service_name\": \"Perawatan Luka\",\n        \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n        \"price\": 150000,\n        \"duration\": 60,\n        \"nurse_id\": 1,\n        \"updated_at\": \"2026-01-12T18:24:02.000000Z\",\n        \"created_at\": \"2026-01-12T18:24:02.000000Z\",\n        \"service_id\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"service_name\": \"Perawatan Luka\",\r\n  \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\r\n  \"price\": 150000,\r\n  \"duration\": 60,\r\n  \"nurse_id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/services/2"
+					},
+					"response": [
+						{
+							"name": "Update Data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"service_name\": \"Perawatan Luka\",\r\n  \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\r\n  \"price\": 150000,\r\n  \"duration\": 60,\r\n  \"nurse_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/services/2"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:24:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Update Data\",\n    \"data\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Data Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{apiURL}}/services/2"
+					},
+					"response": [
+						{
+							"name": "Get All Data Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiURL}}/services/5"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:25:34 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Delete Data\",\n    \"data\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/nurses"
+					},
+					"response": [
+						{
+							"name": "Get All Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/transactions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:28:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get All Data\",\n    \"data\": [\n        {\n            \"transaction_id\": 1,\n            \"patient_id\": 1,\n            \"service_id\": 1,\n            \"reservation_date\": \"2026-01-15T00:00:00.000000Z\",\n            \"payment_method\": \"cash\",\n            \"status\": \"paid\",\n            \"notes\": \"Pasien minta jadwal pagi\",\n            \"paid_at\": \"2026-01-12T18:27:41.000000Z\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"patient\": {\n                \"patient_id\": 1,\n                \"name\": \"Ahmad Fauzi\",\n                \"nik\": \"3276011203990001\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Melati No. 5, Bandung\",\n                \"birth_date\": \"1999-03-12T00:00:00.000000Z\",\n                \"gender\": \"Laki-laki\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"service\": {\n                \"service_id\": 1,\n                \"service_name\": \"Perawatan Luka\",\n                \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n                \"price\": 150000,\n                \"duration\": 60,\n                \"nurse_id\": 1,\n                \"created_at\": \"2026-01-12T18:27:41.000000Z\",\n                \"updated_at\": \"2026-01-12T18:27:41.000000Z\"\n            }\n        },\n        {\n            \"transaction_id\": 2,\n            \"patient_id\": 2,\n            \"service_id\": 2,\n            \"reservation_date\": \"2026-01-16T00:00:00.000000Z\",\n            \"payment_method\": \"transfer\",\n            \"status\": \"pending\",\n            \"notes\": null,\n            \"paid_at\": null,\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"patient\": {\n                \"patient_id\": 2,\n                \"name\": \"Siti Nurhaliza\",\n                \"nik\": \"3276012504980002\",\n                \"phone\": \"082345678901\",\n                \"address\": \"Jl. Kenanga No. 10, Jakarta\",\n                \"birth_date\": \"1998-04-25T00:00:00.000000Z\",\n                \"gender\": \"Perempuan\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"service\": {\n                \"service_id\": 2,\n                \"service_name\": \"Suntik Vitamin\",\n                \"description\": \"Layanan suntik vitamin sesuai kebutuhan pasien\",\n                \"price\": 100000,\n                \"duration\": 30,\n                \"nurse_id\": 2,\n                \"created_at\": \"2026-01-12T18:27:41.000000Z\",\n                \"updated_at\": \"2026-01-12T18:27:41.000000Z\"\n            }\n        },\n        {\n            \"transaction_id\": 3,\n            \"patient_id\": 3,\n            \"service_id\": 1,\n            \"reservation_date\": \"2026-01-17T00:00:00.000000Z\",\n            \"payment_method\": \"cash\",\n            \"status\": \"paid\",\n            \"notes\": \"Perlu peralatan tambahan\",\n            \"paid_at\": \"2026-01-12T18:27:41.000000Z\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"patient\": {\n                \"patient_id\": 3,\n                \"name\": \"Budi Santoso\",\n                \"nik\": \"3276010101950003\",\n                \"phone\": \"083456789012\",\n                \"address\": \"Jl. Mawar No. 3, Surabaya\",\n                \"birth_date\": \"1995-01-01T00:00:00.000000Z\",\n                \"gender\": \"Laki-laki\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"service\": {\n                \"service_id\": 1,\n                \"service_name\": \"Perawatan Luka\",\n                \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n                \"price\": 150000,\n                \"duration\": 60,\n                \"nurse_id\": 1,\n                \"created_at\": \"2026-01-12T18:27:41.000000Z\",\n                \"updated_at\": \"2026-01-12T18:27:41.000000Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/transactions/1"
+					},
+					"response": [
+						{
+							"name": "Get Single Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/transactions/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:28:13 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Single Data\",\n    \"data\": [\n        {\n            \"transaction_id\": 1,\n            \"patient_id\": 1,\n            \"service_id\": 1,\n            \"reservation_date\": \"2026-01-15T00:00:00.000000Z\",\n            \"payment_method\": \"cash\",\n            \"status\": \"paid\",\n            \"notes\": \"Pasien minta jadwal pagi\",\n            \"paid_at\": \"2026-01-12T18:27:41.000000Z\",\n            \"created_at\": null,\n            \"updated_at\": null,\n            \"patient\": {\n                \"patient_id\": 1,\n                \"name\": \"Ahmad Fauzi\",\n                \"nik\": \"3276011203990001\",\n                \"phone\": \"081234567890\",\n                \"address\": \"Jl. Melati No. 5, Bandung\",\n                \"birth_date\": \"1999-03-12T00:00:00.000000Z\",\n                \"gender\": \"Laki-laki\",\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"service\": {\n                \"service_id\": 1,\n                \"service_name\": \"Perawatan Luka\",\n                \"description\": \"Perawatan luka ringan hingga sedang di rumah pasien\",\n                \"price\": 150000,\n                \"duration\": 60,\n                \"nurse_id\": 1,\n                \"created_at\": \"2026-01-12T18:27:41.000000Z\",\n                \"updated_at\": \"2026-01-12T18:27:41.000000Z\"\n            }\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"patient_id\": 1,\r\n  \"service_id\": 1,\r\n  \"reservation_date\": \"2026-01-20\",\r\n  \"payment_method\": \"cash\",\r\n  \"status\": \"pending\",\r\n  \"notes\": \"Pasien minta jadwal pagi\",\r\n  \"paid_at\": \"2026-01-20 09:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/transactions"
+					},
+					"response": [
+						{
+							"name": "Create Data",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patient_id\": 1,\r\n  \"service_id\": 1,\r\n  \"reservation_date\": \"2026-01-20\",\r\n  \"payment_method\": \"cash\",\r\n  \"status\": \"pending\",\r\n  \"notes\": \"Pasien minta jadwal pagi\",\r\n  \"paid_at\": \"2026-01-20 09:30:00\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/transactions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:28:18 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Create Data\",\n    \"data\": {\n        \"patient_id\": 1,\n        \"service_id\": 1,\n        \"reservation_date\": \"2026-01-20T00:00:00.000000Z\",\n        \"payment_method\": \"cash\",\n        \"status\": \"pending\",\n        \"notes\": \"Pasien minta jadwal pagi\",\n        \"paid_at\": \"2026-01-20T09:30:00.000000Z\",\n        \"updated_at\": \"2026-01-12T18:28:18.000000Z\",\n        \"created_at\": \"2026-01-12T18:28:18.000000Z\",\n        \"transaction_id\": 4\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"patient_id\": 1,\r\n  \"service_id\": 1,\r\n  \"reservation_date\": \"2026-01-20\",\r\n  \"payment_method\": \"cash\",\r\n  \"status\": \"paid\",\r\n  \"notes\": \"Pasien minta jadwal pagi\",\r\n  \"paid_at\": \"2026-01-20 09:30:00\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/transactions/1"
+					},
+					"response": [
+						{
+							"name": "Update Data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"patient_id\": 1,\r\n  \"service_id\": 1,\r\n  \"reservation_date\": \"2026-01-20\",\r\n  \"payment_method\": \"cash\",\r\n  \"status\": \"paid\",\r\n  \"notes\": \"Pasien minta jadwal pagi\",\r\n  \"paid_at\": \"2026-01-20 09:30:00\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/transactions/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:28:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Update Data\",\n    \"data\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Data Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "{{apiURL}}/transactions/1"
+					},
+					"response": [
+						{
+							"name": "Get All Data Copy",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{apiURL}}/transactions/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:28:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success To Get Delete Data\",\n    \"data\": 1\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password123\"\r\n}\r\n// {\r\n//     \"email\": \"test1@mail.com\",\r\n//     \"password\": \"password123\"\r\n// }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/auth/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "// {\r\n//     \"email\": \"admin@mail.com\",\r\n//     \"password\": \"password123\"\r\n// }\r\n{\r\n    \"email\": \"test1@mail.com\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/auth/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:04:21 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Login Success\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE3NjgwNjQ2NjEsImV4cCI6MTc2ODA2ODI2MSwibmJmIjoxNzY4MDY0NjYxLCJqdGkiOiJvNVZoQ0ZUR0xQODZpdXlEIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjciLCJlbWFpbCI6InRlc3QxQG1haWwuY29tIiwibmFtZSI6InRlc3QxIn0.spCReCAVCEFLMIS4o7xPwKLtTYXhTQv8SBNVKEExpvY\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@mail.com\",\r\n    \"password\": \"password123\"\r\n}"
+						},
+						"url": "{{apiURL}}/auth/refresh"
+					},
+					"response": [
+						{
+							"name": "Refresh",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/auth/refresh"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:04:42 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Login Success\",\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTc2ODA2NDY2MSwiZXhwIjoxNzY4MDY4MjgyLCJuYmYiOjE3NjgwNjQ2ODIsImp0aSI6Ik5mRlFnajh1U2plYlJlZk8iLCJzdWIiOiIxIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyIsImVtYWlsIjoidGVzdDFAbWFpbC5jb20iLCJuYW1lIjoidGVzdDEifQ.oVgfhc6uWxdnXWLlq_-T7e45zR57Tx5FGNeJC3JheTw\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test1\",\r\n    \"email\": \"test1@mail.com\",\r\n    \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{apiURL}}/auth/register"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"test1\",\r\n    \"email\": \"test1@mail.com\",\r\n    \"password\": \"password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{apiURL}}/auth/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:04:15 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Succes to register\",\n    \"data\": {\n        \"name\": \"test1\",\n        \"email\": \"test1@mail.com\",\n        \"updated_at\": \"2026-01-10T17:04:15.000000Z\",\n        \"created_at\": \"2026-01-10T17:04:15.000000Z\",\n        \"user_id\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test\",\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"password123\"\r\n}"
+						},
+						"url": "{{apiURL}}/auth/logout"
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"test\",\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"password123\"\r\n}"
+								},
+								"url": "{{apiURL}}/auth/logout"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:04:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": \"Logout Success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"test\",\r\n    \"email\": \"test@mail.com\",\r\n    \"password\": \"password123\"\r\n}"
+						},
+						"url": "{{apiURL}}/auth/me"
+					},
+					"response": [
+						{
+							"name": "Me",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/auth/me"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.5.0"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 10 Jan 2026 17:04:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"user_id\": 1,\n        \"name\": \"test1\",\n        \"email\": \"test1@mail.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2026-01-10T17:04:15.000000Z\",\n        \"updated_at\": \"2026-01-10T17:04:15.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Logs",
+			"item": [
+				{
+					"name": "Get All Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{apiURL}}/logs"
+					},
+					"response": [
+						{
+							"name": "Get All Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{apiURL}}/logs"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.16"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 12 Jan 2026 18:37:28 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"log_id\": 1,\n            \"user_id\": null,\n            \"log_method\": \"POST\",\n            \"log_url\": \"http://127.0.0.1:8000/api/auth/login\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 2,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/transactions\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 3,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/transactions/1\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 4,\n            \"user_id\": null,\n            \"log_method\": \"POST\",\n            \"log_url\": \"http://127.0.0.1:8000/api/transactions\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 5,\n            \"user_id\": null,\n            \"log_method\": \"PATCH\",\n            \"log_url\": \"http://127.0.0.1:8000/api/transactions/1\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 6,\n            \"user_id\": null,\n            \"log_method\": \"DELETE\",\n            \"log_url\": \"http://127.0.0.1:8000/api/transactions/1\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 7,\n            \"user_id\": null,\n            \"log_method\": \"POST\",\n            \"log_url\": \"http://127.0.0.1:8000/api/auth/login\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 8,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/logs\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 9,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/logs\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 10,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/logs\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 11,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/logs\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        },\n        {\n            \"log_id\": 12,\n            \"user_id\": null,\n            \"log_method\": \"GET\",\n            \"log_url\": \"http://127.0.0.1:8000/api/logs\",\n            \"log_ip\": \"127.0.0.1\",\n            \"created_at\": null,\n            \"updated_at\": null\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
