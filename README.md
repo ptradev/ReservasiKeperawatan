@@ -27,7 +27,7 @@ Aplikasi dirancang menggunakan konsep RESTful API dan basis data relasional, seh
 git clone https://github.com/ptradev/ReservasiKeperawatan
 ```
 
-### Clone Repository
+### Masuk Ke Fodler Project
 ```bash
 cd ReservasiKeperawatan
 ```
