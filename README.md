@@ -25,7 +25,11 @@ Aplikasi dirancang menggunakan konsep RESTful API dan basis data relasional, seh
 
 ```bash
 git clone https://github.com/ptradev/ReservasiKeperawatan
-cd nama-repository
+```
+
+### Clone Repository
+```bash
+cd ReservasiKeperawatan
 ```
 
 ### Install Dependency
@@ -34,12 +38,22 @@ cd nama-repository
 composer install
 ```
 
+### Generate Key
+```
+```bash
+php artisan key:generate
+```
+
+### Generate JWT Secret
+```
+```bash
+php artisan jwt:secret
+```
+
 ### Konfigurasi Environtment
 
 ```bash
 cp .env.example .env
-php artisan key:generate
-```
 
 ```env
 DB_CONNECTION=mysql
